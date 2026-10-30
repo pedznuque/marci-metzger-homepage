@@ -1,0 +1,85 @@
+.profile_and_sold_layout {
+  display: grid;
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.7fr);
+  align-items: stretch;
+  gap: var(--space-2xl);
+  padding: var(--space-5xl) var(--space-2xl);
+  background: var(--color-surface);
+}
+
+.profile_and_sold_layout .profile_container {
+  display: flex;
+  width: 100%;
+  padding: 0;
+}
+
+.profile_and_sold_layout .profile_card {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(var(--profile-size), 1fr) auto;
+}
+
+.profile_and_sold_layout .profile_portrait_area {
+  height: 100%;
+  min-height: var(--profile-portrait-height);
+  overflow: hidden;
+  padding: 0;
+}
+
+.profile_and_sold_layout .profile_avatar {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  object-position: center 25%;
+}
+
+.profile_and_sold_layout .profile_details {
+  padding: var(--space-3xl);
+}
+
+.profile_and_sold_layout .profile_details h2 {
+  font-size: var(--profile-title-size);
+}
+
+@media (max-width: 1000px) {
+  .profile_and_sold_layout {
+    grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.5fr);
+    gap: var(--space-large);
+    padding-inline: var(--space-xl);
+  }
+}
+
+@media (max-width: 760px) {
+  .profile_and_sold_layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: var(--space-3xl) var(--space-medium);
+  }
+
+  .profile_and_sold_layout .profile_container {
+    padding: 0 0 var(--space-2xl);
+  }
+
+  .profile_and_sold_layout .profile_card {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .profile_and_sold_layout .profile_portrait_area {
+    height: var(--profile-portrait-height-mobile);
+    min-height: var(--profile-portrait-height-mobile);
+    padding: 0;
+  }
+
+  .profile_and_sold_layout .profile_avatar {
+    width: 100%;
+    height: 100%;
+  }
+}

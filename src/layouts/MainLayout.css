@@ -1,0 +1,14 @@
+.main_container {
+
+background-color: var(--color-layout);
+width: 100%;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+
+}
+
+.main {
+  width: 100%;
+}

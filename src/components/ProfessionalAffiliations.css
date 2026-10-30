@@ -1,0 +1,92 @@
+.professional_affiliations {
+  width: 100%;
+  padding: var(--space-6xl) var(--space-2xl);
+  border-top: 1px solid var(--color-border-soft);
+  background: var(--color-section-light);
+}
+
+.professional_affiliations_inner {
+  width: 100%;
+  max-width: var(--affiliation-content-width);
+  margin: 0 auto;
+}
+
+.professional_affiliations_heading {
+  margin-bottom: var(--space-4xl);
+  text-align: center;
+}
+
+.professional_affiliations_heading p {
+  margin-bottom: var(--space-small);
+  color: var(--color-accent);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+}
+
+.professional_affiliations_heading h2 {
+  color: var(--color-heading-accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  font-weight: 400;
+}
+
+.professional_affiliations_logos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+}
+
+.affiliation_logo {
+  display: flex;
+  min-width: 0;
+  min-height: 104px;
+  align-items: center;
+  justify-content: center;
+}
+
+.affiliation_logo img {
+  display: block;
+  width: 150px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.affiliation_logo + .affiliation_logo {
+  border-left: 1px solid var(--color-border-soft);
+}
+
+@media (max-width: 650px) {
+  .professional_affiliations {
+    padding: var(--space-5xl) var(--space-medium);
+  }
+
+  .professional_affiliations_heading {
+    margin-bottom: var(--space-3xl);
+  }
+
+  .professional_affiliations_logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .affiliation_logo {
+    min-width: 0;
+  }
+
+  .affiliation_logo img {
+    width: 130px;
+    height: 80px;
+  }
+
+  .affiliation_logo + .affiliation_logo {
+    border-left: 0;
+  }
+
+  .affiliation_logo:nth-child(even) {
+    border-left: 1px solid var(--color-border-soft);
+  }
+
+  .affiliation_logo:nth-child(n + 3) {
+    border-top: 1px solid var(--color-border-soft);
+  }
+}

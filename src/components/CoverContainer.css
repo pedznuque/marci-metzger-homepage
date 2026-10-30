@@ -1,0 +1,112 @@
+.cover_container {
+  position: relative;
+  width: 100%;
+  height: var(--cover-height);
+  background-color: var(--color-cover);
+}
+
+.cover_container > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover_content {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  width: min(calc(100% - var(--space-2xl) - var(--space-2xl)), var(--content-width));
+  margin-inline: auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3xl);
+  pointer-events: none;
+}
+
+.cover_text_container {
+  width: min(100%, 560px);
+  max-width: 560px;
+  padding: var(--space-3xl) var(--space-4xl);
+  border: 1px solid rgb(255 255 255 / 75%);
+  border-radius: var(--hero-panel-radius);
+  background: var(--hero-panel-background);
+  box-shadow: var(--hero-panel-shadow);
+  backdrop-filter: blur(8px);
+}
+
+.cover_eyebrow {
+  margin-bottom: var(--space-large);
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.cover_text_container h1 {
+  max-width: 12ch;
+  margin-bottom: var(--space-large);
+  color: var(--color-text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.cover_text_container > p:last-child {
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.cover_call_button {
+  display: inline-flex;
+  margin-top: var(--space-xl);
+  padding: var(--space-medium) var(--space-3xl);
+  border-radius: var(--radius);
+  background: var(--color-accent);
+  color: var(--color-button-text);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 180ms ease, transform 180ms ease;
+  pointer-events: auto;
+}
+
+.cover_call_button:hover {
+  background: var(--color-text);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+  .cover_content {
+    width: var(--search-width);
+    justify-content: center;
+    gap: var(--space-medium);
+  }
+
+  .cover_text_container {
+    width: 100%;
+    max-width: none;
+    padding: var(--space-xl);
+    border-radius: var(--radius);
+    transform: translateY(-35px);
+  }
+
+  .cover_text_container h1 {
+    font-size: clamp(1.5rem, 7vw, 2.2rem);
+  }
+
+  .cover_call_button {
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--space-medium);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cover_call_button {
+    transition: none;
+  }
+}

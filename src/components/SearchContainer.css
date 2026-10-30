@@ -1,0 +1,100 @@
+.search_container {
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  width: min(var(--search-width), var(--search-max-width));
+  padding: var(--space-large) var(--space-2xl);
+  transform: translate(-50%, -50%);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+  font: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--search-gap);
+}
+
+.search_component {
+  display: flex;
+  flex: 1 1 var(--search-field-width);
+  min-width: 0;
+  min-height: var(--search-height);
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--search-gap);
+  padding: var(--space-xs) var(--space-medium);
+  border: 1px solid var(--search-border);
+  border-radius: var(--radius);
+}
+
+.search_component > svg {
+  flex: 0 0 var(--search-icon-size);
+}
+
+.search_bar {
+  flex: 2 1 var(--search-bar-width);
+}
+
+.search_button {
+  justify-content: center;
+  border: 0;
+  background-color: var(--color-accent);
+  color: var(--color-button-text);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  appearance: none;
+}
+
+.search_component input {
+  flex: 1;
+  min-width: 0;
+  padding: var(--search-control-padding);
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.search_component select {
+  flex: 1;
+  padding: var(--search-control-padding);
+  border: none;
+  background: transparent;
+  color: gray;
+  font: inherit;
+  outline: none;
+}
+
+@media (max-width: 950px) and (min-width: 701px) {
+  .search_container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-content: stretch;
+  }
+
+  .search_bar {
+    grid-column: span 2;
+  }
+
+  .search_button {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .search_container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--search-gap-mobile);
+    padding: var(--space-2xl);
+  }
+
+  .search_component,
+  .search_bar {
+    flex: 0 0 var(--search-height-mobile);
+    min-height: var(--search-height-mobile);
+    width: 100%;
+  }
+}

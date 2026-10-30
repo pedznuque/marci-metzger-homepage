@@ -1,0 +1,114 @@
+.get_it_sold {
+  min-width: 0;
+  padding: var(--space-3xl);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--card-shadow);
+  color: var(--color-text);
+}
+
+.get_it_sold_heading {
+  margin-bottom: var(--space-2xl);
+  text-align: left;
+}
+
+.get_it_sold_heading p {
+  margin-bottom: var(--space-small);
+  color: var(--color-accent);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.get_it_sold_heading h2 {
+  color: var(--color-text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: var(--feature-title-size);
+  font-weight: 400;
+}
+
+.get_it_sold_rows {
+  display: grid;
+  gap: var(--space-large);
+}
+
+.get_it_sold_row {
+  display: grid;
+  min-height: var(--sold-image-height);
+  grid-template-columns: minmax(180px, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: var(--space-large);
+  padding-bottom: var(--space-large);
+  border-bottom: 1px solid var(--color-border-soft);
+}
+
+.get_it_sold_row:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.get_it_sold_row img {
+  display: block;
+  width: 100%;
+  height: var(--sold-image-height);
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+
+.get_it_sold_copy {
+  text-align: left;
+}
+
+.get_it_sold_copy h3 {
+  margin-bottom: var(--space-medium);
+  color: var(--color-heading-accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+.get_it_sold_copy p {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 1100px) {
+  .get_it_sold {
+    padding: var(--space-2xl);
+  }
+
+  .get_it_sold_row {
+    grid-template-columns: minmax(150px, 0.8fr) minmax(0, 1.2fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .get_it_sold {
+    padding: var(--space-xl) var(--space-medium);
+  }
+
+  .get_it_sold_row {
+    grid-template-columns: minmax(180px, 0.8fr) minmax(0, 1.2fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .get_it_sold_heading {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .get_it_sold_row {
+    grid-template-columns: 1fr;
+    gap: var(--space-medium);
+  }
+
+  .get_it_sold_row img {
+    height: 190px;
+  }
+
+  .get_it_sold_row .get_it_sold_copy {
+    padding: 0 var(--space-small);
+  }
+}

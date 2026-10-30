@@ -1,0 +1,123 @@
+.services_section {
+  width: 100%;
+  padding: var(--space-7xl) var(--space-2xl);
+  background: var(--color-cover);
+  color: var(--color-text);
+}
+
+.services_inner {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.services_heading {
+  max-width: var(--content-text-width);
+  margin: 0 auto var(--space-5xl);
+  text-align: center;
+}
+
+.services_heading p {
+  margin-bottom: var(--space-medium);
+  color: var(--color-accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.services_heading h2 {
+  margin-bottom: var(--space-medium);
+  color: var(--color-text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: var(--feature-title-size);
+  font-weight: 400;
+}
+
+.services_heading span {
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.services_grid {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4xl);
+  align-items: stretch;
+}
+
+.service_card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--card-shadow);
+}
+
+.service_image {
+  display: block;
+  width: 100%;
+  height: var(--service-image-height);
+  object-fit: cover;
+}
+
+.service_card_content {
+  padding: var(--space-3xl);
+}
+
+.service_card h3 {
+  margin-bottom: var(--space-large);
+  color: var(--color-text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: var(--card-title-size);
+  font-weight: 400;
+}
+
+.service_card p {
+  color: var(--color-muted);
+  line-height: 1.8;
+}
+
+@media (max-width: 850px) {
+  .services_grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-xl);
+  }
+
+  .service_card:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - var(--space-medium));
+    justify-self: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .services_section {
+    padding: var(--space-6xl) var(--space-medium);
+  }
+
+  .services_heading {
+    margin-bottom: var(--space-3xl);
+  }
+
+  .services_grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .service_card:last-child {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .service_image {
+    height: var(--service-image-height-mobile);
+  }
+
+  .service_card_content {
+    padding: var(--space-xl);
+  }
+}
