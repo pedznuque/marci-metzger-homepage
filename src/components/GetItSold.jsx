@@ -1,7 +1,7 @@
 import React from "react";
-import interiorPhoto from "../assets/service-one.png";
-import homePhoto from "../assets/service-two.png";
-import buyerPhoto from "../assets/service-three.png";
+import interiorPhoto from "../assets/sold-one.png";
+import homePhoto from "../assets/sold-two.png";
+import buyerPhoto from "../assets/sold-three.png";
 import "./GetItSold.css";
 
 const salesHighlights = [
@@ -17,14 +17,14 @@ const salesHighlights = [
     description:
       "Get it SOLD! We exhaust every avenue to ensure our listings are at the fingertips of every possible buyer, getting you top dollar for your home.",
     image: homePhoto,
-    alt: "Modern home with landscaped grounds",
+    alt: "Home with a swimming pool and landscaped grounds",
   },
   {
     title: "Guide to Buyers",
     description:
       "Nobody knows the market like we do. Enjoy having a pro at your service. Market analysis, upgrades lists, contractors on speed dial, & more!",
     image: buyerPhoto,
-    alt: "Home buyers meeting with a real estate professional",
+    alt: "House key on a red house-shaped keychain",
   },
 ];
 
